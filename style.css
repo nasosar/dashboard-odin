@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -8,14 +9,14 @@ body {
   padding: 0;
   background: linear-gradient(90deg, rgb(147, 51, 234) 0%, rgb(219, 39, 119) 50%, rgb(249, 115, 22) 100%);
   display: grid;
-  grid-template-columns: minmax(300px, 2fr) minmax(500px, 8fr);
+  grid-template-columns: minmax(300px, 2fr) minmax(500px, 10fr);
   font-family: "Nunito", sans-serif;
 }
 
 .div-dashboard {
   height: 100vh;
   padding: 20px;
-  background-color: rgba(241, 245, 249, 0.7);
+  background-color: rgba(241, 245, 249, 0.75);
   border-radius: 20px 0 0 20px;
 }
 
@@ -44,7 +45,7 @@ body {
 
 input {
   height: 23px;
-  width: 50%;
+  width: 80%;
   border-radius: 20px;
   border: 1px solid #1f2937;
   background-color: white;
@@ -161,4 +162,53 @@ input {
 .nav-btn:hover {
   background-color: #4f46e5;
   cursor: pointer;
+}
+
+.aside {
+  padding: 0 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #f1f5f9;
+  gap: 44px;
+}
+
+.svg-aside {
+  height: 20px;
+  align-self: center;
+  fill: #f1f5f9;
+}
+
+.aside-h1 {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  width: 100%;
+  margin: 20px 0 0 0;
+  border-bottom: 1px solid #f1f5f9;
+  align-self: center;
+  font-family: "Saira", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+li {
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 $pinkColor: #db2777;
 $fuchsiaColor: #c026d3;
@@ -8,7 +8,7 @@ $indigoBlueColor: #4f46e5;
 $oragneColor: #f97316;
 $offwhiteBg: #f1f5f9;
 $greyColor: #ccd1d8;
-$offwhiteTRANSPERENT: rgb(241, 245, 249, 0.7);
+$offwhiteTRANSPERENT: rgb(241, 245, 249, 0.75);
 $darkFonts: #1f2937;
 $lightFonts: #f1f5f9;
 
@@ -21,7 +21,7 @@ body {
     padding: 0;
     background: linear-gradient(90deg, rgba(147,51,234,1) 0%, rgba(219,39,119,1) 50%, rgba(249,115,22,1) 100%);
     display: grid;
-    grid-template-columns: minmax(300px, 2fr) minmax(500px, 8fr);
+    grid-template-columns: minmax(300px, 2fr) minmax(500px, 10fr);
     font-family: 'Nunito', sans-serif;
 }
 
@@ -62,7 +62,7 @@ body {
 
 input {
     height: 23px;
-    width: 50%;
+    width: 80%;
     border-radius: 20px;
     border: 1px solid $darkFonts;
     background-color: white;
@@ -192,4 +192,54 @@ input {
 .nav-btn:hover {
     background-color: $indigoBlueColor;
     cursor: pointer;
+}
+
+// ASIDE STYLING 
+
+.aside {
+    padding: 0 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: $lightFonts;
+    gap: 44px;
+}
+
+.svg-aside {
+    height: 20px;
+    align-self: center;
+    fill: $lightFonts;
+}
+
+.aside-h1 {
+    min-width: fit-content;
+    width: 100%;
+    margin: 20px 0 0 0;
+    border-bottom: 1px solid $lightFonts;
+    align-self: center;
+    font-family: 'Saira', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+li {
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
 }
