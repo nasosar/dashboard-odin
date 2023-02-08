@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+
+$pinkColor: #db2777;
+$fuchsiaColor: #c026d3;
+$purpleColor: #9333ea;
+$indigoBlueColor: #4f46e5;
+$oragneColor: #f97316;
+$offwhiteBg: #f1f5f9;
+$greyColor: #ccd1d8;
+$offwhiteTRANSPERENT: rgb(241, 245, 249, 0.7);
+$darkFonts: #1f2937;
+$lightFonts: #f1f5f9;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(147,51,234,1) 0%, rgba(219,39,119,1) 50%, rgba(249,115,22,1) 100%);
+    display: grid;
+    grid-template-columns: minmax(300px, 2fr) minmax(500px, 8fr);
+    font-family: 'Nunito', sans-serif;
+}
+
+.div-dashboard {
+    height: 100vh;
+    padding: 20px;
+    background-color: $offwhiteTRANSPERENT;
+    border-radius: 20px 0 0 20px;
+}
+
+// GROUP HEADER + NAV STYLING
+
+.div-headnav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $offwhiteBg;
+    border-radius: 15px;
+}
+
+.header, .nav {
+    padding: 0 20px;
+    height: 85px;
+    //background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// HEADER STRYLING
+
+.divsearch {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 60%;
+}
+
+input {
+    height: 23px;
+    width: 50%;
+    border-radius: 20px;
+    border: 1px solid $darkFonts;
+    background-color: white;
+    color: $darkFonts;
+    font-family: inherit;
+}
+
+
+.svg-header {
+    height: 20px;
+    stroke: $darkFonts;
+    stroke-width: 2px;
+    fill: transparent;
+    cursor: pointer;
+}
+
+.svg-header:hover {
+    stroke: $indigoBlueColor;
+}
+
+.fa-github {
+    color: $darkFonts;
+    transition: transform 0.3s ease-in-out;
+    font-size: 23px;
+    margin: 0;
+}
+  
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+    color: $indigoBlueColor;
+}
+
+.divuser{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-user1 {
+    width: 50px;
+    min-height: 70%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-image: url(./imgs/avatars/girl-redhair.jpg);
+    background-size: contain;
+    box-shadow: 2px 2px 7px $greyColor;
+}
+
+.h2-header {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: $darkFonts;
+}
+
+
+// NAV STYLING
+
+.nav {
+
+    
+
+}
+
+.div-nav-userinfo {
+    height: 100%;
+    width: 60%;
+    display: grid;
+    grid-template: 40px 40px / 90px 80%;
+    grid-template-areas:    "icon text"
+                            "icon title";
+
+
+}
+
+.iconuser-2 {
+    grid-area: icon;
+    align-self: center;
+    width: 70px;
+    min-height: 70%;
+    aspect-ratio: 1/1;
+    border-radius: 70%;
+    background-image: url(./imgs/avatars/girl-redhair.jpg);
+    background-size: contain;
+    box-shadow: 2px 2px 7px $greyColor;
+}
+
+.p-nav {
+    margin: 0;
+    grid-area: text;
+    justify-self: start;
+    align-self: end;
+    font-size: 18px;
+    font-weight: 700;
+    color: $darkFonts;
+}
+
+.h2-nav {
+    margin: 0;
+    grid-area: title;
+    justify-self: start;
+    align-self: start;
+    font-size: 24px;
+    font-weight: 700;
+    color: $darkFonts;
+}
+
+.div-nav-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-btn {
+    font-family: inherit;
+    height: 40px;
+    width: 120px;
+    border: none;
+    background-color: $fuchsiaColor;
+    color: $lightFonts;
+    font-weight: 800;
+    font-size: 18px;
+    border-radius: 40px;
+}
+
+.nav-btn:hover {
+    background-color: $indigoBlueColor;
+    cursor: pointer;
+}
