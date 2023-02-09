@@ -3,11 +3,12 @@
 
 $pinkColor: #db2777;
 $fuchsiaColor: #c026d3;
+$fuchsiaTRANSPARENT: #bf26d386;
 $purpleColor: #9333ea;
 $indigoBlueColor: #4f46e5;
 $oragneColor: #e05e00;
 $offwhiteBg: #f1f5f9;
-$greyColor: #ccd1d8;
+$greyColor: #d7dce2;
 $offwhiteTRANSPERENT: rgb(241, 245, 249, 0.75);
 $offwhiteHOVER: rgba(238, 197, 252, 0.3);
 $darkFonts: #1f2937;
@@ -17,6 +18,7 @@ $lightFonts: #f1f5f9;
     box-sizing: border-box;
 }
 
+ 
 body {
     margin: 0;
     padding: 0;
@@ -27,8 +29,9 @@ body {
 }
 
 .div-dashboard {
-    height: 100vh;
+    margin: 0;
     padding: 20px;
+    min-height: 100vh;
     background-color: $offwhiteTRANSPERENT;
     border-radius: 20px 0 0 20px;
     display: flex;
@@ -106,8 +109,7 @@ input {
 
 .icon-user1 {
     width: 50px;
-    min-height: 70%;
-    aspect-ratio: 1/1;
+    height: 50px;
     border-radius: 50%;
     background-image: url(./imgs/avatars/girl-redhair.jpg);
     background-size: contain;
@@ -261,7 +263,8 @@ li:hover {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 6fr minmax(240px, 1fr) ;
+   // overflow: auto;
 }
 
 .main {
@@ -287,10 +290,145 @@ li:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.art-section::-webkit-scrollbar {
+    display: none;
+  }
+
+.article-card{
+    border-radius: 10px;
+    background-color: $offwhiteBg;
+    display: flex;
+
+}
+
+.div-articlehighlight {
+    height: 100%;
+    width: 10px;
+    border-radius: 10px 0 0 10px;
+    background-color: $fuchsiaTRANSPARENT;
 }
 
 
-.article-card{
-    border-radius: 20px;
-    background-color: $offwhiteBg;
+.div-articlemain {
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.div-articlemain:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: $fuchsiaTRANSPARENT;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.div-articlemain:hover:before{
+    width: 100%;
+}
+
+.h4-card {
+    margin: 0;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.p-card {
+    margin: 0;
+    z-index: 1;
+}
+
+.div-svgcards {
+
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: end;
+    z-index: 1;
+}
+
+.svg-card {
+    height: 20px;
+    align-self: center;
+    fill: $darkFonts;
+}
+
+#view-icon {
+    height: 30px;
+}
+
+.svg-card:hover {
+    fill: $offwhiteBg;
+    cursor: pointer;
+}
+
+.sectionright>.article-card{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.div-updates>.p-card {    
+    padding-bottom: 2px;
+    width: 100%;
+    text-align: center;  
+    max-width: 200px;
+}
+
+.div-updates>h4 {
+    margin: 0;
+}
+
+.div-updates {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+hr {
+    width: 90%;
+    border-top: 1px solid $darkFonts;
+}
+
+.div-trending {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.miles {
+    background-image: url(./imgs/avatars/milles.jpg);
+}
+
+.john {
+    background-image: url(./imgs/avatars/john.jpg);
+}
+
+.ana {
+    background-image: url(./imgs/avatars/ana.jpg);
 }
